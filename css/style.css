@@ -1,173 +1,182 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+header img {
+    height: 50px;
+}
+header nav {
+    display: flex;
+}
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.hero {
+background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcwMDU3MDc5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+background-size: cover;
+height: 20vh; /* Set the height to the full viewport height */
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden; /* Hide overflow to prevent scrolling */
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-        header img {
-            height: 50px;
-        }
-        header nav {
-            display: flex;
-        }
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-        .hero {
-        background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcwMDU3MDc5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
-        background-size: cover;
-        height: 20vh; /* Set the height to the full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden; /* Hide overflow to prevent scrolling */
-    }
+.hero h1 {
+color: #fff;
+font-size: 3rem;
+text-align: center;
+max-width: 80%; /* Limit the width of the text */
+margin: 0 auto; /* Center the text within the hero */
+}
+.content {
+    background-color: #f1f1f1;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between; /* Add space between image and form */
+    align-items: center;
+    text-align: center; /* Center text within the content div */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
 
-    .hero h1 {
-        color: #fff;
-        font-size: 3rem;
-        text-align: center;
-        max-width: 80%; /* Limit the width of the text */
-        margin: 0 auto; /* Center the text within the hero */
-    }
-        .content {
-            background-color: #f1f1f1;
-            padding: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .content form {
-            width: 50%;
-        }
-        .content form input[type="text"], .content form input[type="email"], .content form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-        }
-        .content form input[type="submit"] {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .highlights {
-            padding: 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .highlights ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 40%;
-        }
-        .highlights li {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        @media screen and (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-    .content form {
-        width: 80%;
-    }
-    .highlights {
-        flex-direction: column;
-    }
-    .highlights ul {
-        width: 100%;
-    }
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    header img {
-        margin-bottom: 10px; /* Add margin below the logo */
-    }
-    header nav {
-        margin-top: 10px;
-    }
-    header nav a {
-        margin: 10px 0;
-    }
-    header nav {
-        flex-direction: column; /* Display navigation items in a column */
-    }
-    header nav a {
-        margin-left: 0; /* Remove the left margin on navigation items */
-    }
+.content .image {
+    flex-basis: 50%; /* Take up 50% of the container width */
+}
+
+.content form {
+    flex-basis: 50%; /* Take up 50% of the container width */
+    max-width: 400px;
+    margin-top: 20px;
+}
+.content form input[type="text"], .content form input[type="email"], .content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.content form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.highlights {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 40%;
+}
+.highlights li {
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+@media screen and (max-width: 768px) {
+.hero h1 {
+font-size: 2rem; /* Adjust font size for smaller screens */
+}
+.content form {
+width: 80%;
+}
+
+.highlights {
+flex-direction: column;
+}
+.highlights ul {
+width: 100%;
+}
+header {
+flex-direction: column;
+text-align: center;
+}
+header img {
+margin-bottom: 10px; /* Add margin below the logo */
+}
+header nav {
+margin-top: 10px;
+}
+header nav a {
+margin: 10px 0;
+}
+header nav {
+flex-direction: column; /* Display navigation items in a column */
+}
+header nav a {
+margin-left: 0; /* Remove the left margin on navigation items */
+}
 }
 header nav a:hover {
-    background-color: #555; /* Change to your desired hover color */
+background-color: #555; /* Change to your desired hover color */
 }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .hero h1, .description {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        .image {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    .user-card {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
+    to {
+        opacity: 1;
     }
+}
+.hero h1, .description {
+    animation: fadeIn 1.5s ease-in-out;
+}
+.image {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.user-card {
+display: flex;
+align-items: center;
+margin-top: 20px;
+}
 
-    .user-info {
-    display: flex;
-    align-items: center;
+.user-info {
+display: flex;
+align-items: center;
 }
 
 .profile {
-    margin-right: 10px;
+margin-right: 10px;
 }
 
 .profile-image {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    object-fit: cover; /* Optional: untuk memastikan gambar proporsional */
+border-radius: 50%;
+width: 50px;
+height: 50px;
+object-fit: cover; /* Optional: untuk memastikan gambar proporsional */
 }
 
 .text-info {
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 }
 
 .username,
 .email {
-    margin: 0;
+margin: 0;
 }
