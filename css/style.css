@@ -1,112 +1,173 @@
+
         body {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
         }
-
-        nav {
+        header {
+            background-color: #333;
+            color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: #f1f1f1;
         }
-
-        nav .logo {
-            margin-right: auto;
+        header img {
+            height: 50px;
         }
-
-        nav div {
+        header nav {
+            display: flex;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
             margin-left: 20px;
+        }
+        .hero {
+        background-image: url('https://images.unsplash.com/37/IHLjdHdzSvi0rgUMMlSK_TE3_0286.jpg?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcwMDU3MDc5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+        background-size: cover;
+        height: 20vh; /* Set the height to the full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Hide overflow to prevent scrolling */
+    }
+
+    .hero h1 {
+        color: #fff;
+        font-size: 3rem;
+        text-align: center;
+        max-width: 80%; /* Limit the width of the text */
+        margin: 0 auto; /* Center the text within the hero */
+    }
+        .content {
+            background-color: #f1f1f1;
+            padding: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content form {
+            width: 50%;
+        }
+        .content form input[type="text"], .content form input[type="email"], .content form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        .content form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
         }
-
-        .container {
+        .highlights {
+            padding: 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background-color: #f1f1f1;
         }
-
-        .content {
-            display: flex;
-            margin: 20px;
+        .highlights ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 40%;
         }
-
-        .content > div {
-            margin: 10px;
-            flex: 1;
+        .highlights li {
+            margin-bottom: 20px;
         }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label, input, select, textarea {
-            margin-bottom: 10px;
-        }
-
-        .table_person {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        .table_person, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
         footer {
-            text-align: center;
+            background-color: #333;
+            color: #fff;
             padding: 10px;
-            background-color: #f1f1f1;
+            text-align: center;
         }
-        b{
-            background-color: chartreuse;
-        }
-  /* Existing CSS styles */
-
-/* New styles for contact form */
-.contact-form {
-    margin: 10px;
-    flex: 1;
+        @media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+    .content form {
+        width: 80%;
+    }
+    .highlights {
+        flex-direction: column;
+    }
+    .highlights ul {
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header img {
+        margin-bottom: 10px; /* Add margin below the logo */
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav a {
+        margin: 10px 0;
+    }
+    header nav {
+        flex-direction: column; /* Display navigation items in a column */
+    }
+    header nav a {
+        margin-left: 0; /* Remove the left margin on navigation items */
+    }
+}
+header nav a:hover {
+    background-color: #555; /* Change to your desired hover color */
 }
 
-.contact-form form {
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .hero h1, .description {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-card {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    margin-right: 10px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Optional: untuk memastikan gambar proporsional */
+}
+
+.text-info {
     display: flex;
     flex-direction: column;
 }
 
-/* New styles for vacation section */
-.vacation {
-    margin: 10px;
-    flex: 1;
-    text-align: center;
-}
-
-.profile-img {
-    width: 100px; /* Adjust the size as needed */
-    height: 100px; /* Adjust the size as needed */
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-/* New styles for solution card */
-.solution-card {
-    margin: 10px;
-    flex: 1;
-}
-
-.solution-card h2 {
-    text-align: center;
-}
-
-.solution-card ol {
-    list-style-type: decimal;
-    padding-left: 20px;
+.username,
+.email {
+    margin: 0;
 }
