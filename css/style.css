@@ -1,0 +1,112 @@
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        nav .logo {
+            margin-right: auto;
+        }
+
+        nav div {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .content {
+            display: flex;
+            margin: 20px;
+        }
+
+        .content > div {
+            margin: 10px;
+            flex: 1;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label, input, select, textarea {
+            margin-bottom: 10px;
+        }
+
+        .table_person {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table_person, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        b{
+            background-color: chartreuse;
+        }
+  /* Existing CSS styles */
+
+/* New styles for contact form */
+.contact-form {
+    margin: 10px;
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* New styles for vacation section */
+.vacation {
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* New styles for solution card */
+.solution-card {
+    margin: 10px;
+    flex: 1;
+}
+
+.solution-card h2 {
+    text-align: center;
+}
+
+.solution-card ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
