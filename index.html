@@ -1,61 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Travel Smart</title>
+    <title>File Explorer - Interactive Folder System</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img class="profile-image" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-%26-tour-logo-design-template-f6c0e6340c35d217a24dfab2863075ab_screen.jpg?ts=1605952957" alt="Travel Agency Logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Paket</a>
-            <a href="#hubungi-kami-section">hubungi kami</a>
-        </nav>
-    </header>
-    <div class="hero">
-        <h1 >Kebahagiaan Anda adalah kebahagiaan kami</h1>
-    </div>
-    <div class="content" id="hubungi-kami-section">
-        <div class="image">
-            <img width="50%" height="70%" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/travel-%26-tour-logo-design-template-f6c0e6340c35d217a24dfab2863075ab_screen.jpg?ts=1605952957" alt="Mountain and blue sky">
-        <p style="color: #555;"><i>"liburan seru di akhir tahun"</i></p>
-        <div class="user-info">
-            <div class="profile">
-                <img class="profile-image" src="https://images.unsplash.com/photo-1513875528452-39400945934d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcwMDU3NDI4OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Profile Image">
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-icon">📁</span>
+                    <span class="title-text">File Explorer</span>
+                </h1>
+                <p class="subtitle">Klik folder untuk melihat isinya</p>
             </div>
-            <div class="text-info">
-                <p class="username"> <i >muhammad idris</i></p>
-                <p class="email">muhammadidris@mail.com</p>
+            <div class="animated-bg">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
             </div>
-        </div>
-        </div>
-        <form>
-            <h1 style="color: #555;"> hubungi kami</h1>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <input type="submit" value="Send">
-        </form>
+        </header>
+
+        <main class="main-content">
+            <div class="explorer-container">
+                <!-- Folder 1: Projects -->
+                <div class="folder-item" data-folder="1">
+                    <div class="folder-header">
+                        <div class="folder-icon-wrapper">
+                            <span class="folder-icon">📂</span>
+                            <span class="folder-arrow">▶</span>
+                        </div>
+                        <span class="folder-name">Projects</span>
+                        <span class="file-count">3 files</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item" data-delay="0">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">project-alpha.js</span>
+                            <span class="file-size">24 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="1">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">project-beta.html</span>
+                            <span class="file-size">12 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="2">
+                            <span class="file-icon">📄</span>
+                            <span class="file-name">project-gamma.css</span>
+                            <span class="file-size">8 KB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folder 2: Documents -->
+                <div class="folder-item" data-folder="2">
+                    <div class="folder-header">
+                        <div class="folder-icon-wrapper">
+                            <span class="folder-icon">📂</span>
+                            <span class="folder-arrow">▶</span>
+                        </div>
+                        <span class="folder-name">Documents</span>
+                        <span class="file-count">2 files</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item" data-delay="0">
+                            <span class="file-icon">📝</span>
+                            <span class="file-name">readme.md</span>
+                            <span class="file-size">5 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="1">
+                            <span class="file-icon">📝</span>
+                            <span class="file-name">notes.txt</span>
+                            <span class="file-size">3 KB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folder 3: Images -->
+                <div class="folder-item" data-folder="3">
+                    <div class="folder-header">
+                        <div class="folder-icon-wrapper">
+                            <span class="folder-icon">📂</span>
+                            <span class="folder-arrow">▶</span>
+                        </div>
+                        <span class="folder-name">Images</span>
+                        <span class="file-count">4 files</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item" data-delay="0">
+                            <span class="file-icon">🖼️</span>
+                            <span class="file-name">banner.png</span>
+                            <span class="file-size">156 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="1">
+                            <span class="file-icon">🖼️</span>
+                            <span class="file-name">logo.svg</span>
+                            <span class="file-size">12 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="2">
+                            <span class="file-icon">🖼️</span>
+                            <span class="file-name">background.jpg</span>
+                            <span class="file-size">234 KB</span>
+                        </div>
+                        <div class="file-item" data-delay="3">
+                            <span class="file-icon">🖼️</span>
+                            <span class="file-name">icon-set.png</span>
+                            <span class="file-size">89 KB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folder 4: Videos -->
+                <div class="folder-item" data-folder="4">
+                    <div class="folder-header">
+                        <div class="folder-icon-wrapper">
+                            <span class="folder-icon">📂</span>
+                            <span class="folder-arrow">▶</span>
+                        </div>
+                        <span class="folder-name">Videos</span>
+                        <span class="file-count">1 file</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item" data-delay="0">
+                            <span class="file-icon">🎬</span>
+                            <span class="file-name">tutorial.mp4</span>
+                            <span class="file-size">45 MB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folder 5: Music -->
+                <div class="folder-item" data-folder="5">
+                    <div class="folder-header">
+                        <div class="folder-icon-wrapper">
+                            <span class="folder-icon">📂</span>
+                            <span class="folder-arrow">▶</span>
+                        </div>
+                        <span class="folder-name">Music</span>
+                        <span class="file-count">5 files</span>
+                    </div>
+                    <div class="folder-content">
+                        <div class="file-item" data-delay="0">
+                            <span class="file-icon">🎵</span>
+                            <span class="file-name">song-01.mp3</span>
+                            <span class="file-size">4.2 MB</span>
+                        </div>
+                        <div class="file-item" data-delay="1">
+                            <span class="file-icon">🎵</span>
+                            <span class="file-name">song-02.mp3</span>
+                            <span class="file-size">3.8 MB</span>
+                        </div>
+                        <div class="file-item" data-delay="2">
+                            <span class="file-icon">🎵</span>
+                            <span class="file-name">song-03.mp3</span>
+                            <span class="file-size">5.1 MB</span>
+                        </div>
+                        <div class="file-item" data-delay="3">
+                            <span class="file-icon">🎵</span>
+                            <span class="file-name">song-04.mp3</span>
+                            <span class="file-size">4.5 MB</span>
+                        </div>
+                        <div class="file-item" data-delay="4">
+                            <span class="file-icon">🎵</span>
+                            <span class="file-name">song-05.mp3</span>
+                            <span class="file-size">3.9 MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="footer-icon">✨</span>
+                    <span>Created with passion</span>
+                    <span class="footer-year">2024</span>
+                </p>
+            </div>
+        </footer>
     </div>
-    <div class="highlights">
-        <ul>
-            <li>Sarapan Pagi</li>
-            <li>Wifi gratis</li>
-            <li>Parkir gratis</li>
-            <li>tempat nyaman </li>
-        </ul>
-        <div class="description">
-            <h2>Liburan seru</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam vel tincidunt dignissim, sapien nibh aliquam nunc, vel bibendum velit mi vel odio. Sed euismod, diam vel tincidunt dignissim, sapien nibh aliquam nunc, vel bibendum velit mi vel odio.</p>
-        </div>
-    </div>
-    <footer>
-        &copy; 2023  Created by <a href="https://muhammad-idris-a.000webhostapp.com/dist/">Muhammad idris Assyafei</a>
-    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
